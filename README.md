@@ -1,1 +1,1 @@
-# color_picker_game
+# color-picker-game
