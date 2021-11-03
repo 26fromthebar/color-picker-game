@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Color picker game</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">The color guessing game</h1>
+      <p class="description">
+        Try to find which color corresponds to the RGB value provided below. You
+        can start a new game by pressing the 'new colors' button or change the
+        difficulty level between easy and hard. Good luck!
+      </p>
+    </header>
+    <main class="main">
+      <div class="config-container">
+        <button class="btn btn-new-game">New game</button>
+        <button class="btn btn-easy">Easy</button>
+        <button class="btn btn-normal selected">Normal</button>
+        <button class="btn btn-hard">Hard</button>
+      </div>
+      <div class="rgb-display-container">
+        <p class="rgb-display">RGB</p>
+      </div>
+      <div class="color-squares-container">
+        <div class="color-square"></div>
+        <div class="color-square"></div>
+        <div class="color-square"></div>
+        <div class="color-square"></div>
+        <div class="color-square"></div>
+        <div class="color-square"></div>
+      </div>
+      <div class="message-container">
+        <p class="message">Try to guess!</p>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

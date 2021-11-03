@@ -1,0 +1,26 @@
+{
+  "name": "color-picker-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/26fromthebar/color-picker-game.git"
+  },
+  "author": "Kostas Christou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/26fromthebar/color-picker-game/issues"
+  },
+  "homepage": "https://github.com/26fromthebar/color-picker-game#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.14"
+  }
+}
