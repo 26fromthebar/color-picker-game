@@ -1,3 +1,7 @@
+/* :root {
+  
+} */
+
 *,
 *::after,
 *::before {
@@ -9,6 +13,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+}
+
+@media screen and (min-width: 50em) {
+  html {
+    font-size: 70.3125%;
+  }
+}
+
+@media screen and (min-width: 93.75em) {
+  html {
+    font-size: 78.125%;
+  }
 }
 
 body {
@@ -41,6 +57,26 @@ body {
   color: #eeecd1;
 }
 
+@media screen and (min-width: 50em) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .description {
+    max-width: 55ch;
+  }
+}
+
+@media screen and (min-width: 93.75em) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .description {
+    max-width: 60ch;
+  }
+}
+
 /* Game-configuration bar styling*/
 
 .config-container {
@@ -48,7 +84,7 @@ body {
   flex-direction: row;
   justify-content: end;
 
-  padding-inline: 1em;
+  padding-inline: 0.75em;
   border-bottom: 1px solid currentColor;
 }
 
@@ -96,9 +132,9 @@ body {
 .color-squares-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
+  gap: 0.5em;
 
-  max-width: 800px;
+  max-width: 1000px;
   width: 90%;
   margin: 0 auto;
   padding-block: 5em 3em;
