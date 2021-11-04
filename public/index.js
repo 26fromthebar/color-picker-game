@@ -34,6 +34,10 @@ function createNewGame(elements) {
 }
 
 function createModeGame(mode) {
+  message.textContent = 'Try to guess!';
+  message.style.color = '#2c8e99';
+  message.style.fontWeight = 400;
+
   switch (mode) {
     case easy:
       squareCount = 3;
@@ -49,7 +53,7 @@ function createModeGame(mode) {
             `;
 
       const threeSquares = document.querySelectorAll('.color-square');
-      createNewColor(threeSquares);
+      createNewGame(threeSquares);
       addEventToSquares(threeSquares);
       break;
 
@@ -70,8 +74,9 @@ function createModeGame(mode) {
             `;
 
       const sixSquares = document.querySelectorAll('.color-square');
-      createNewColor(sixSquares);
+      createNewGame(sixSquares);
       addEventToSquares(sixSquares);
+      break;
 
     case hard:
       squareCount = 9;
@@ -93,7 +98,7 @@ function createModeGame(mode) {
             `;
 
       const nineSquares = document.querySelectorAll('.color-square');
-      createNewColor(nineSquares);
+      createNewGame(nineSquares);
       addEventToSquares(nineSquares);
   }
 }
@@ -123,31 +128,34 @@ window.addEventListener('load', () => {
   addEventToSquares(colorSquares);
 });
 
-// newGame.addEventListener('click', () => {
-//   if (squareCount === 9) {
-//     createModeGame(hard);
-//     message.style.color = '#2c8e99';
-//   } else if (squareCount === 6) {
-//     createModeGame(normal);
-//     message.style.color = '#2c8e99';
-//   } else if (squareCount === 3) {
-//     createModeGame(easy);
-//     message.style.color = '#2c8e99';
-//   } else {
-//     createNewGame(colorSquares);
-//     addEventToSquares(colorSquares);
-//     message.style.color = '#2c8e99';
-//   }
-// });
+newGame.addEventListener('click', () => {
+  switch (squareCount) {
+    case 9:
+      createModeGame(hard);
+      break;
 
-// easy.addEventListener('click', () => {
-//   createModeGame(easy);
-// });
+    case 6:
+      createModeGame(normal);
+      break;
 
-// normal.addEventListener('click', () => {
-//   createModeGame(normal);
-// });
+    case 3:
+      createModeGame(easy);
+      break;
 
-// hard.addEventListener('click', () => {
-//   createModeGame(hard);
-// });
+    default:
+      createNewGame(colorSquares);
+      addEventToSquares(colorSquares);
+  }
+});
+
+easy.addEventListener('click', () => {
+  createModeGame(easy);
+});
+
+normal.addEventListener('click', () => {
+  createModeGame(normal);
+});
+
+hard.addEventListener('click', () => {
+  createModeGame(hard);
+});
